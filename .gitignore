@@ -8,3 +8,6 @@ TranslationServiceLibrary/bin
 TranslationServiceSolution/obj
 TranslationServiceSolution/bin
 TranslationServiceSolution/packages
+GrpcService/bin
+TranslationServiceLibrary/obj
+TranslationServiceLibrary/obj
