@@ -1,0 +1,10 @@
+﻿TranslationServiceSolution/.vs
+WebApi/.vs
+WebApi/bin
+WebApi/obj
+ConsoleApp/obj
+GrpcService/obj
+TranslationServiceLibrary/bin
+TranslationServiceSolution/obj
+TranslationServiceSolution/bin
+TranslationServiceSolution/packages

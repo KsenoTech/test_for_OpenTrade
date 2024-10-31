@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option csharp_namespace = "TranslationServiceLibrary";
+
+package greet;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+// Определение gRPC-сервиса TranslationService
+service TranslationService {
+    rpc Translate (TranslateRequest) returns (TranslateResponse);
+    rpc GetServiceInfo (ServiceInfoRequest) returns (ServiceInfoResponse);
+}
+
+// Сообщение запроса для перевода
+message TranslateRequest {
+    repeated string texts = 1;   // Список текстов для перевода
+    string fromLang = 2;         // Исходный язык
+    string toLang = 3;           // Целевой язык
+}
+
+// Сообщение ответа с результатами перевода
+message TranslateResponse {
+    repeated string translations = 1;  // Переведённые тексты
+}
+
+// Запрос для получения информации о сервисе
+message ServiceInfoRequest {}
+
+// Ответ с информацией о сервисе
+message ServiceInfoResponse {
+    string info = 1;
+}
