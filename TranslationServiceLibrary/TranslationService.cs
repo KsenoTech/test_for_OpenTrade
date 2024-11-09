@@ -73,7 +73,7 @@ namespace TranslationServiceLibrary
     }
 
     /// <summary>
-    /// Модель ответа API перевода (настройте под конкретный API).
+    /// Модель ответа API перевода ( конкретный API).
     /// </summary>
     public class TranslationApiResponse
     {

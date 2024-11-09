@@ -9,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Регистрация зависимостей
 builder.Services.AddSingleton<TranslationCache>();
 builder.Services.AddSingleton<ITranslationService, TranslationService>();
+builder.Services.AddSingleton<ITranslationService, GrpcTranslationClient>(provider =>
+{
+    var grpcAddress = "https://localhost:5222"; // Замените на ваш адрес gRPC-сервера
+    return new GrpcTranslationClient(grpcAddress);
+});
+
 // Add services to the container.
 builder.Services.AddGrpc();
 
